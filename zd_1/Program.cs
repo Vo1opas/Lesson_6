@@ -5,16 +5,17 @@
 //1, -7, 567, 89, 223-> 3
 
 
-Console.Write("Введите числа (через пробел): ");
-int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+Console.WriteLine("ВВедите колличество чисел : ");
+int amount = int.Parse(Console.ReadLine());
 int count = 0;
- 
-for (int i = 0; i < arr.Length; i++)
+
+for (int i = 1; i <= amount; i++)
 {
-    if (arr[i] > 0)
+    Console.WriteLine("ВВедите число #" + i + ":");
+    if (int.Parse(Console.ReadLine()) > 0)
     {
         count++;
     }
 }
- 
-Console.WriteLine($"Кол-во чисел больше нуля: {count}");
+
+Console.WriteLine("Чисел больше нуля:" + count);
